@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | workdemo</title>
+    <title>Unity WebGL Player | Game_survey</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+    <div id="unity-container" style="width:50%; height:50%">
+      <canvas id="unity-canvas" width=50% height=50% tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -17,11 +17,7 @@
         </div>
       </div>
       <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">workdemo</div>
-      </div>
+    
     </div>
     <script>
 
@@ -57,14 +53,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/gittest.loader.js";
+      var loaderUrl = buildUrl + "/webproject.loader.js";
       var config = {
-        dataUrl: buildUrl + "/gittest.data",
-        frameworkUrl: buildUrl + "/gittest.framework.js",
-        codeUrl: buildUrl + "/gittest.wasm",
+        dataUrl: buildUrl + "/webproject.data.gz",
+        frameworkUrl: buildUrl + "/webproject.framework.js.gz",
+        codeUrl: buildUrl + "/webproject.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "workdemo",
+        productName: "Game_survey",
         productVersion: "0.1",
         showBanner: unityShowBanner,
       };
@@ -94,8 +90,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
       }
 
       loadingBar.style.display = "block";
